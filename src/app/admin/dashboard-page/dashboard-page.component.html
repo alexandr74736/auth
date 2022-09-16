@@ -1,0 +1,27 @@
+<div *ngIf="posts.length; else loading">
+    <div class="form-control">
+        <input type="text" placeholder="Найти контакт..." [(ngModel)]="searchStr">
+    </div>
+    <table class="table">
+        <tbody>
+            <tr *ngFor="let post of posts | searchPosts:searchStr; let idx = index">
+                <div class="thead">
+                    <td class="thead__title">{{ post.title }}</td>
+                </div>
+                <td>{{ post.text }}</td>
+                <div class="tfooter">
+                    <td class="tfooter__actions">
+                        <button class="btn btn-link open" [routerLink]="['/admin', 'post', post.id, 'edit']">
+                            Открыть
+                        </button>
+                        <a (click)="remove(post.id)">Удалить</a>
+                    </td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #loading>
+    <p class="text-center">Идёт загрузка...</p>
+</ng-template>

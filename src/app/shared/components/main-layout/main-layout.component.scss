@@ -1,0 +1,10 @@
+a {
+    color: var(--dark-color);
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        color: #666;
+    }
+
+}

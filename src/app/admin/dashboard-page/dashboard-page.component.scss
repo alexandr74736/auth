@@ -1,0 +1,41 @@
+.table, .thead, .tfooter, td {
+    width: 100%;
+}
+
+tr {
+    width: 100%;
+}
+
+.thead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thead__idx {
+    max-width: 75px;
+}
+
+.thead__title {
+    max-width: 100%;
+    text-align: start;
+}
+
+.tfooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tfooter__date {
+    max-width: 100%;
+}
+
+.tfooter__actions {
+    max-width: 175px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    margin-left: 1rem;
+}
